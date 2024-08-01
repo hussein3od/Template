@@ -7,7 +7,7 @@ body{
 /* Start Landing Page */
 .landing-page{
     min-height: 100vh;
-    background-image: url(../images/ef7fb1b37078b6a2aef8e40710446bfa.jpg);
+    background-image: url(../images/01.jpg);
     background-size: cover;
 }
 .landing-page .overlay{
@@ -50,7 +50,8 @@ body{
     text-decoration: none;
     transition: 0.5s
 }
-.header-area .links li a:hover{
+.header-area .links li a:hover,
+.header-area .links li a.active{
     color: var(--main--color)
 }
 .introduction-text{
