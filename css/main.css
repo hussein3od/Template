@@ -45,6 +45,14 @@ body{
     display: inline-block;
     margin-left: 10px;
 }
+.header-area .links li a{
+    color: white;
+    text-decoration: none;
+    transition: 0.5s
+}
+.header-area .links li a:hover{
+    color: var(--main--color)
+}
 .introduction-text{
     position: absolute;
     left: 50%;
@@ -55,7 +63,8 @@ body{
     text-align: center;
 }
 .introduction-text h1{
-    
+    font-size: 34px;
+    margin: 0 0 12px
 }
 .introduction-text h1 span{
     color: var(--main--color)
