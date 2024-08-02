@@ -18,12 +18,13 @@ body{
 .sittings-box.open{
     margin-left: 0
 }
-.sittings-box .icona {
+.sittings-box .toggle {
+    font-size: 20px;
     position: absolute;
-    right: -30px;
+    right: -38px;
     top: 100px;
     background-color: white;
-    padding: 8px 0;
+    padding: 7px 4px;
     width: 30px;
     text-align: center;
     cursor: pointer;

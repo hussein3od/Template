@@ -1,3 +1,11 @@
+let toggle = document.querySelector(".toggle");
+let sittingsBox = document.querySelector(".sittings-box");
+let sittingsIcon = document.querySelector(".icona")
+toggle.onclick = function(){
+    sittingsBox.classList.toggle("open")
+    sittingsIcon.classList.toggle("fa-spin")
+}
+
 // Select Landin Page
 let landingPage = document.querySelector(".landing-page")
 
