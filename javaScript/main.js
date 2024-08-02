@@ -6,6 +6,16 @@ toggle.onclick = function(){
     sittingsIcon.classList.toggle("fa-spin")
 }
 
+// Swich Colors
+const colorLi = document.querySelectorAll(".colors-list li")
+
+colorLi.forEach(li => {
+    li.addEventListener("click", (e) => {
+        
+        document.documentElement.style.setProperty("--main--color",e.target.dataset.color)
+    })
+})
+
 // Select Landin Page
 let landingPage = document.querySelector(".landing-page")
 
