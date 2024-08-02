@@ -1,3 +1,10 @@
+let mainColors = localStorage.getItem("color_option")
+
+if(mainColors !== null){
+    document.documentElement.style.setProperty("--main--color", localStorage.getItem("color_option")
+)
+}
+
 let toggle = document.querySelector(".toggle");
 let sittingsBox = document.querySelector(".sittings-box");
 let sittingsIcon = document.querySelector(".icona")
@@ -12,7 +19,15 @@ const colorLi = document.querySelectorAll(".colors-list li")
 colorLi.forEach(li => {
     li.addEventListener("click", (e) => {
         
-        document.documentElement.style.setProperty("--main--color",e.target.dataset.color)
+        document.documentElement.style.setProperty("--main--color", e.target.dataset.color)
+
+        localStorage.setItem("color_option", e.target.dataset.color)
+
+        e.target.parentElement.querySelectorAll(".active").forEach(element => {
+            element.classList.remove("active")
+        });
+
+        e.target.classList.add("active")
     })
 })
 
