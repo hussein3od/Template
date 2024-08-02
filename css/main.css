@@ -4,6 +4,40 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+/* Start Sitting Box */
+.sittings-box {
+    position: fixed;
+    margin-left: -200px;
+    top: 0;
+    width: 200px;
+    background-color: white;
+    min-height: 100vh;
+    transition: 0.5s;
+    z-index: 100;
+}
+.sittings-box.open{
+    margin-left: 0
+}
+.sittings-box .icona {
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    background-color: white;
+    padding: 8px 0;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.sittings-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    min-height: 100vh;
+    transition: 0.5s;
+    z-index: 100;
+}
+/* End Sitting Box */
 /* Start Landing Page */
 .landing-page{
     min-height: 100vh;
