@@ -1,8 +1,15 @@
 let mainColors = localStorage.getItem("color_option")
 
 if(mainColors !== null){
-    document.documentElement.style.setProperty("--main--color", localStorage.getItem("color_option")
-)
+    document.documentElement.style.setProperty("--main--color", mainColors)
+
+    document.querySelectorAll(".colors-list li").forEach(element => {
+        element.classList.remove("active")
+
+        if(element.dataset.color === mainColors){
+            element.classList.add("active")
+        }
+    });
 }
 
 let toggle = document.querySelector(".toggle");
