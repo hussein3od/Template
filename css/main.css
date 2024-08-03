@@ -24,8 +24,7 @@ body{
     right: -38px;
     top: 100px;
     background-color: white;
-    padding: 7px 4px;
-    width: 30px;
+    padding: 9px;
     text-align: center;
     cursor: pointer;
 }
@@ -37,7 +36,8 @@ body{
 }
 .sittings-box .option-box h4{
     margin: 0;
-    color: #666
+    color: #666;
+    font-size: 14px
 }
 .sittings-box .option-box .colors-list{
     list-style: none;
@@ -72,6 +72,23 @@ body{
 .sittings-box .option-box .colors-list li.active{
     opacity: 1;
     border-color: white;
+}
+.sitting-container .random-backgrounds .yes,
+.sitting-container .random-backgrounds .no{
+    width: 50px;
+    background-color: #009688;
+    color: white;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: 0.5;
+    cursor: pointer
+}
+.sitting-container .random-backgrounds span.active{
+    opacity: 1;
 }
 .sittings-box {
     position: fixed;

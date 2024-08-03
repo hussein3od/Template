@@ -38,6 +38,20 @@ colorLi.forEach(li => {
     })
 })
 
+let randomBackEl = document.querySelectorAll(".random-backgrounds span")
+
+randomBackEl.forEach(span => {
+
+    span.addEventListener("click", (e) => {
+
+    e.target.parentElement.querySelectorAll(".active").forEach(element => {
+        element.classList.remove("active")
+    })
+    e.target.classList.add("active")
+    
+    })
+})
+
 // Select Landin Page
 let landingPage = document.querySelector(".landing-page")
 
