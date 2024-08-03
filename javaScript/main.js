@@ -14,6 +14,24 @@ if(mainColors !== null){
 let backgroundOption = true;
 let backgroundInterval;
 
+let backgroundLocalStorageItem = localStorage.getItem("background_Option")
+
+if(backgroundLocalStorageItem !== null){
+    if(backgroundLocalStorageItem === "true"){
+        backgroundOption = true
+    }else{
+        backgroundOption = false
+    }
+    document.querySelectorAll(".random-backgrounds span").forEach(element => {
+        element.classList.remove("active")
+    });
+    if(backgroundLocalStorageItem === "true") {
+        document.querySelector(".random-backgrounds .yes").classList.add("active")
+    }else{
+        document.querySelector(".random-backgrounds .no").classList.add("active")
+    }
+}
+
 let toggle = document.querySelector(".toggle");
 let sittingsBox = document.querySelector(".sittings-box");
 let sittingsIcon = document.querySelector(".icona")
@@ -53,9 +71,11 @@ randomBackEl.forEach(span => {
 
     if(e.target.dataset.background === "yes"){
         backgroundOption = true;
+        localStorage.setItem("background_Option", true)
         randomaizeImgs()
     }else{
         backgroundOption = false;
+        localStorage.setItem("background_Option", false)
         clearInterval(backgroundInterval)
     }
     })
