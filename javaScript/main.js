@@ -11,6 +11,8 @@ if(mainColors !== null){
         }
     });
 }
+let backgroundOption = true;
+let backgroundInterval;
 
 let toggle = document.querySelector(".toggle");
 let sittingsBox = document.querySelector(".sittings-box");
@@ -48,7 +50,14 @@ randomBackEl.forEach(span => {
         element.classList.remove("active")
     })
     e.target.classList.add("active")
-    
+
+    if(e.target.dataset.background === "yes"){
+        backgroundOption = true;
+        randomaizeImgs()
+    }else{
+        backgroundOption = false;
+        clearInterval(backgroundInterval)
+    }
     })
 })
 
@@ -57,10 +66,16 @@ let landingPage = document.querySelector(".landing-page")
 
 let imgsArray = ["01.jpg", "02.jfif", "03.jfif", "04.jfif", "05.jpg"]
 
-setInterval(() => {
-    //Get Random number
-    let randomNumber = Math.floor(Math.random() * imgsArray.length);
+function randomaizeImgs() {
+    if (backgroundOption === true) {
 
-    //Change Bacground Image Url
-    landingPage.style.backgroundImage = "url('../images/" + imgsArray[randomNumber] + "')"
-},5000)
+        backgroundInterval = setInterval(() => {
+            //Get Random number
+            let randomNumber = Math.floor(Math.random() * imgsArray.length);
+        
+            //Change Bacground Image Url
+            landingPage.style.backgroundImage = "url('../images/" + imgsArray[randomNumber] + "')"
+        },5000)
+    }
+}
+randomaizeImgs()
