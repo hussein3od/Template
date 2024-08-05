@@ -99,3 +99,23 @@ function randomaizeImgs() {
     }
 }
 randomaizeImgs()
+
+let ourSkills = document.querySelector(".skills");
+
+window.onscroll = function () {
+
+    let skillsOffsetTop = ourSkills.offsetTop;
+
+    let skillsOuterHeight = ourSkills.offsetTop;
+    let windowHeight = this.innerHeight;
+    let windowScrollTop = scrollY
+    
+    if(windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight - 570)){
+        let allSkills = document.querySelectorAll(".skill-box .skill-progress span")
+
+        allSkills.forEach(skill => {
+            skill.style.width = skill.dataset.progress
+        })
+        console.log("egdhth")
+    }
+}
