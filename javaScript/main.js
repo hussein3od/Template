@@ -116,6 +116,47 @@ window.onscroll = function () {
         allSkills.forEach(skill => {
             skill.style.width = skill.dataset.progress
         })
-        console.log("egdhth")
     }
 }
+
+let ourGalary = document.querySelectorAll(".galary img")
+
+ourGalary.forEach(img => {
+
+    img.addEventListener("click", (e) => {
+        let overLay = document.createElement("div");
+
+        overLay.className = "popup-overLay";
+
+        document.body.appendChild(overLay)
+
+        let popupBox = document.createElement("div")
+    
+        popupBox.className = "popupBox";
+        
+        if(img.alt !== null){
+            let imgHeading = document.createElement("h3");
+            let imgText = document.createTextNode(img.alt);
+            imgHeading.appendChild(imgText)
+            popupBox.appendChild(imgHeading)
+        }
+        let popupImage = document.createElement("img");
+        
+        popupImage.src = img.src;
+        
+        popupBox.appendChild(popupImage);
+        
+        document.body.appendChild(popupBox)
+        
+        let closeButton = document.createElement("span")
+        closeButton.innerHTML = "X";
+        closeButton.className = "close-button"
+        popupBox.appendChild(closeButton)
+        closeButton.onclick = function () {
+            popupBox.style.display = "none";
+            overLay.style.display = "none"
+        }
+
+    })
+
+})
