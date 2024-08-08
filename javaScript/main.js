@@ -84,7 +84,7 @@ randomBackEl.forEach(span => {
 // Select Landin Page
 let landingPage = document.querySelector(".landing-page")
 
-let imgsArray = ["01.jpg", "02.jfif", "03.jfif", "04.jfif", "05.jpg"]
+let imgsArray = ["01.jpg", "08.jfif", "03.jfif", "04.jfif", "05.jpg"]
 
 function randomaizeImgs() {
     if (backgroundOption === true) {
