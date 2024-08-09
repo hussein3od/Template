@@ -162,11 +162,16 @@ ourGalary.forEach(img => {
 })
 
 let allBullets = document.querySelectorAll(".nav-bullets .bullet")
+let allLinks = document.querySelectorAll(".links a")
 
-allBullets.forEach(bullet => {
-    bullet.addEventListener("click", (e) => {
-        document.querySelector(e.target.dataset.section).scrollIntoView({
-            behavior: "smooth"
+function anyWhere(element) {
+    element.forEach(ele => {
+        ele.addEventListener("click", (e) => {
+            document.querySelector(e.target.dataset.section).scrollIntoView({
+                behavior: "smooth"
+            })
         })
     })
-})
+}
+anyWhere(allBullets)
+anyWhere(allLinks)
