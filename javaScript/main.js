@@ -50,11 +50,8 @@ colorLi.forEach(li => {
 
         localStorage.setItem("color_option", e.target.dataset.color)
 
-        e.target.parentElement.querySelectorAll(".active").forEach(element => {
-            element.classList.remove("active")
-        });
+        handleActive(e)
 
-        e.target.classList.add("active")
     })
 })
 
@@ -64,10 +61,7 @@ randomBackEl.forEach(span => {
 
     span.addEventListener("click", (e) => {
 
-    e.target.parentElement.querySelectorAll(".active").forEach(element => {
-        element.classList.remove("active")
-    })
-    e.target.classList.add("active")
+    handleActive(e)
 
     if(e.target.dataset.background === "yes"){
         backgroundOption = true;
@@ -164,7 +158,7 @@ ourGalary.forEach(img => {
 let allBullets = document.querySelectorAll(".nav-bullets .bullet")
 let allLinks = document.querySelectorAll(".links a")
 
-function anyWhere(element) {
+function scrollToSomeWhere(element) {
     element.forEach(ele => {
         ele.addEventListener("click", (e) => {
             document.querySelector(e.target.dataset.section).scrollIntoView({
@@ -173,5 +167,12 @@ function anyWhere(element) {
         })
     })
 }
-anyWhere(allBullets)
-anyWhere(allLinks)
+scrollToSomeWhere(allBullets)
+scrollToSomeWhere(allLinks)
+
+function handleActive(ev) {
+    ev.target.parentElement.querySelectorAll(".active").forEach(element => {
+        element.classList.remove("active")
+    });
+    ev.target.classList.add("active")
+}

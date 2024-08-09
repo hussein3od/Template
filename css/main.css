@@ -81,8 +81,8 @@ body{
     opacity: 1;
     border-color: white;
 }
-.sitting-container .random-backgrounds .yes,
-.sitting-container .random-backgrounds .no{
+.sitting-container .option-box .yes,
+.sitting-container .option-box .no{
     width: 50px;
     background-color: #009688;
     color: white;
@@ -95,7 +95,7 @@ body{
     opacity: 0.5;
     cursor: pointer
 }
-.sitting-container .random-backgrounds span.active{
+.sitting-container .option-box span.active{
     opacity: 1;
 }
 /* End Sitting Box */
