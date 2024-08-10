@@ -185,14 +185,15 @@ body{
     padding: 15px;
     font-weight: bold;
 }
+.header-area .links-container{
+    width: 100%;
+    text-align: right;
+}
 .header-area .links{
     list-style: none;
     padding: 0;
     width: 100%;
-    text-align: right;
-    font-size: 15px;
     padding-left: 0;
-    padding-right: 20px;
 }
 .header-area .links li{
     display: inline-block;
@@ -206,6 +207,24 @@ body{
 .header-area .links li a:hover,
 .header-area .links li a.active{
     color: var(--main--color)
+}
+.header-area .toggle-menu{
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    cursor: pointer;
+    margin-top: 15px;
+    float: right;
+    display: none;
+}
+.header-area .toggle-menu:focus{
+    outline: none;
+}
+.header-area .toggle-menu span{
+    display: block;
+    background-color: white;
+    height: 4px;
+    margin-bottom: 4px
 }
 .introduction-text{
     position: absolute;
@@ -223,6 +242,14 @@ body{
 }
 .introduction-text h1 span{
     color: var(--main--color)
+}
+@media (max-width: 991px){
+    .header-area .toggle-menu{
+        display: block;
+    }
+    .header-area .links{
+        display: none;
+    }
 }
 /* End Landing Page */
 /* Start About Us */
