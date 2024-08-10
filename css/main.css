@@ -84,7 +84,7 @@ body{
 .sitting-container .option-box .yes,
 .sitting-container .option-box .no{
     width: 50px;
-    background-color: #009688;
+    background-color: var(--main--color);
     color: white;
     margin-top: 10px;
     display: inline-block;
@@ -97,6 +97,18 @@ body{
 }
 .sitting-container .option-box span.active{
     opacity: 1;
+}
+.sitting-container .reset-option{
+    background-color: #f44336;
+    border: none;
+    width: 178px;
+    margin: 10px auto;
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 /* End Sitting Box */
 /* Start Nav Bullets */

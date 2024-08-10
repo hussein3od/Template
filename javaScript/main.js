@@ -213,3 +213,10 @@ bulletsSpan.forEach(span => {
         handleActive(e)
     })
 })
+
+document.querySelector(".reset-option").onclick = function () {
+    localStorage.removeItem("bullets_option")
+    localStorage.removeItem("background_Option")
+    localStorage.removeItem("color_option");
+    window.location.reload()
+}
