@@ -220,3 +220,23 @@ document.querySelector(".reset-option").onclick = function () {
     localStorage.removeItem("color_option");
     window.location.reload()
 }
+// toggle menu
+
+let toggleBtn = document.querySelector(".toggle-menu");
+let tLinks = document.querySelector(".links");
+
+toggleBtn.onclick = function (e) {
+    e.stopPropagation();
+    toggleBtn.classList.toggle("menu-active");
+    tLinks.classList.toggle("open")
+}
+document.addEventListener("click", (e) => {
+    if(e.target !== toggleBtn && e.target !== tLinks){
+        toggleBtn.classList.remove("menu-active");
+        tLinks.classList.remove("open")
+    }
+})
+
+tLinks.onclick = function (e) {
+    e.stopPropagation()
+}
