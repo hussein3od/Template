@@ -19,7 +19,7 @@ body{
     background-color: white;
     min-height: 100vh;
     transition: 0.5s;
-    z-index: 100;
+    z-index: 10000;
     border-right: 1px solid #aaa
 }
 .sittings-box.open{
@@ -247,11 +247,16 @@ body{
     z-index: 2;
     color: white;
     text-align: center;
-    max-width: 40%
+    width: 95%
 }
 .introduction-text h1{
     font-size: 34px;
     margin: 0 0 12px
+}
+@media (max-width: 575px){
+    .introduction-text h1{
+        font-size: 26px;
+    }
 }
 .introduction-text h1 span{
     color: var(--main--color)
@@ -294,6 +299,15 @@ body{
     padding-top: 50px;
     padding-bottom: 50px;
     display: flex
+}
+@media (max-width: 767px){
+    .about-us{
+        display: block;
+        text-align: center;
+    }
+    .about-us .image-box img{
+        display: none
+    }
 }
 .about-us .info-box{
     padding: 30px;
@@ -343,6 +357,15 @@ body{
     text-align: center;
     line-height: 30px;
 }
+@media (max-width: 767px) {
+    .skills .skill-box{
+        display: block;
+    }
+    .skills .skill-box .skill-name{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
 .skills .skill-box .skill-progress{
     height: 30px;
     width: 100%;
@@ -364,7 +387,8 @@ body{
 /* Start Galary */
 .galary{
     padding-top: 50px;
-    padding-bottom: 50px
+    padding-bottom: 50px;
+    text-align: center;
 }
 .galary h2{
     font-weight: bold;
@@ -474,6 +498,24 @@ body{
     margin-bottom: 40px;
     position: relative
 }
+@media (max-width: 767px){
+    .timeline .timeline-content .left,
+    .timeline .timeline-content .right{
+        width: 100%;
+        margin-bottom: 20px
+    }
+    .timeline .timeline-content .left::before,
+    .timeline .timeline-content .right::before{
+        display: none;
+    }
+    .timeline .timeline-content .left .content::before,
+    .timeline .timeline-content .right .content::before{
+        display: none;
+    }
+    .timeline .timeline-content::before{
+        height: 88%
+    }
+}
 .timeline .timeline-content .left{
     float: left;
 }
@@ -547,6 +589,16 @@ body{
     float: left;
     text-align: center;
     margin-bottom: 40px;
+}
+@media (max-width: 991px){
+    .features .feat-box{
+        width: calc(100% / 2)
+    }
+}
+@media (max-width: 575px){
+    .features .feat-box{
+        width: 100%
+    }
 }
 .features .feat-box img{
     width: 120px;
@@ -694,6 +746,13 @@ body{
 .contact form .right{
     float: right;
     width: 49%;
+}
+@media (max-width: 767px){
+    .contact form .left,
+    .contact form .right{
+        float: none;
+        width: 100%;
+    }
 }
 .contact form input:not([type="submit"]),
 .contact form textarea{
