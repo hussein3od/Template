@@ -89,7 +89,7 @@ function randomaizeImgs() {
         
             //Change Bacground Image Url
             landingPage.style.backgroundImage = "url('../images/" + imgsArray[randomNumber] + "')"
-        },5000)
+        },3000)
     }
 }
 randomaizeImgs()
@@ -104,7 +104,7 @@ window.onscroll = function () {
     let windowHeight = this.innerHeight;
     let windowScrollTop = scrollY
     
-    if(windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight - 1050)){
+    if(windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight - 550)){
         let allSkills = document.querySelectorAll(".skill-box .skill-progress span")
 
         allSkills.forEach(skill => {
